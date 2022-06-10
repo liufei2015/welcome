@@ -26,7 +26,7 @@ char v_add(char a,char b)
 	return ch_table[i][j];
 }
 
-string& add(string& add1,string& add2)          //too heavy ,too ugly!!!
+string Qadd(string add1,string add2)          //too heavy ,too ugly!!!
 {
 	int len_add1,len_add2;
 	int s_len;
