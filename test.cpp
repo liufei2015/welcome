@@ -3,17 +3,17 @@
 
 using namespace std;
 
-string Qadd(string,string);
-
+string Qadd(string&,string&);
+string a;
+string b;
 int main()
 {
-	string a,b;
+	string& ap=a;
+	string& bp=b;
  	cout<<"starting test..."<<endl;
- 	cin>>a;
-	cout<<endl;
- 	cin>>b;
+ 	cin>>a>>b;
  	cout<<endl;
- 	cout<<Qadd(a,b)<<endl;
+ 	cout<<Qadd(ap,bp)<<endl;
 	cout<<"test end."<<endl;
  	return 0;
 }

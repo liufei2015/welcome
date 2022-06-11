@@ -3,8 +3,8 @@
 
 using namespace std;
 
-unsigned short ch_table[9][9];
-string res;
+unsigned short ch_table[9][9]={0};
+string res="";
 
 void ch_table_init(void)
 {
@@ -21,12 +21,12 @@ void ch_table_init(void)
 char v_add(char a,char b)
 {
 	unsigned char i,j;
-	i=a-'0';
-	j=b-'0';
+	i=a+'0';
+	j=b+'0';
 	return ch_table[i][j];
 }
 
-string Qadd(string add1,string add2)          //too heavy ,too ugly!!!
+string Qadd(string& add1,string& add2)          //too heavy ,too ugly!!!
 {
 	int len_add1,len_add2;
 	int s_len;
@@ -34,7 +34,7 @@ string Qadd(string add1,string add2)          //too heavy ,too ugly!!!
 	ch_table_init();
 	len_add1=add1.size();
 	len_add2=add2.size();
-	s_len=len_add1>=len_add2?len_add1++:len_add2++;
+	s_len=len_add1>=len_add2?len_add1+1:len_add2+1;
                   
 	char tadd1[len_add1];
 	char tadd2[len_add2];
